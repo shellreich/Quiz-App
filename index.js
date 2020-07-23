@@ -208,7 +208,7 @@ $(`${id}`).append(`<h3>Your answer is correct!</h3>
         }
         else {
           $(`${id}`).append(`<h3>That answer is wrong.</h3>
-            <p class="highlight">The answer actually is:${currentQuest.answer}</p>
+            <p class="highlight">The answer is actually ${currentQuest.answer}</p>
             <p> ${currentQuest.detailedAnswer}</p>
             `);
           $(`${id}`).addClass("wrong-answer");
