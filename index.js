@@ -80,6 +80,9 @@ score: 0
 // Start quiz triggered by click of start quiz button
 function startQuiz() {
     $('#start').on('click', function(event) {
+        $("#title").hide();
+        // call function show title
+        title();
         renderQuestion();
     });
 }
@@ -174,6 +177,20 @@ function displayResults() {
     STORE.currentQuestion = 0;
     STORE.score = 0;
     $("main").html(resultHtml);
+}
+
+function title() {
+  let quizTitle = (
+    `
+    <div class="group">
+      <div class="item">
+        <h1>All About Cats Quiz</h1>
+          <div class="question-score"></div>
+      </div>
+    </div>
+     `
+  );
+  $("header").html(quizTitle);
 }
 
 // checks if end of questions
